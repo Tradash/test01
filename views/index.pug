@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	h1 Тестовое задание
+	h3 Напишите функцию, которая из произвольного входящего массива выберет все комбинации чисел, сумма которых будет равняться Х.
+	form(method='post')
+		label(for='x') X =
+		input(type='number' name='x' id='x' required='' value='10')
+		br
+		br
+		label(for='size') Размер массива =
+		input(type='number' name='size' id='size' required='' min ='1' max='14' value='10')
+		br
+		br
+		label(for='maxE') Максимальной число в массиве =
+		input(type='number' name='maxE' id='maxE' required='' value='8')
+		br
+		br
+		button(type='submit') ответ
+		hr
+		h4 Сгенерированный массив = #{arr}
+		br
+		h4 Найденный комбинации
+		each item in result
+			p #{item}
+  	
